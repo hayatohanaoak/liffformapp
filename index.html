@@ -70,7 +70,7 @@
         $(function () {
             $('form').submit(function () {
                 const workType = $('input:checked').val();
-                const area = $('option[name="area"]').val();
+                const area = $('[name=area] option:selected').text();
                 const subject  = $('input[name="subject"]').val();
                 const msg = `${workType}\n${area}\n${subject}`;
                 sendText(msg);
