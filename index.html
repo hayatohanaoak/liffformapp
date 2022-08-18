@@ -71,7 +71,61 @@
         </div>
         <p class="mt-3">希望科目</p>
         <div>
-            <input class="form-control w-100 mt-1" name="subject" required>
+            <select name="subject" required>
+                <option value="内科">内科</option>
+                <option value="総合診療科">総合診療科</option>
+                <option value="外科">外科</option>
+                <option value="救命救急">救命救急</option>
+                <option value="神経内科">神経内科</option>
+                <option value="脳神経外科">脳神経外科</option>
+                <option value="呼吸器内科">呼吸器内科</option>
+                <option value="呼吸器外科">呼吸器外科</option>
+                <option value="循環器内科">循環器内科</option>
+                <option value="心臓血管外科">心臓血管外科</option>
+                <option value="血管外科">血管外科</option>
+                <option value="消化器内科">消化器内科</option>
+                <option value="消化器外科">消化器外科</option>
+                <option value="内分泌・糖尿病・代謝内科">内分泌・糖尿病・代謝内科</option>
+                <option value="腎臓内科">腎臓内科</option>
+                <option value="泌尿器科">泌尿器科</option>
+                <option value="人工透析科">人工透析科</option>
+                <option value="血液内科">血液内科</option>
+                <option value="腫瘍内科">腫瘍内科</option>
+                <option value="老年内科">老年内科</option>
+                <option value="在宅診療">在宅診療</option>
+                <option value="リウマチ科">リウマチ科</option>
+                <option value="健診・人間ドック">健診・人間ドック</option>
+                <option value="眼科">眼科</option>
+                <option value="耳鼻咽喉科">耳鼻咽喉科</option>
+                <option value="皮膚科">皮膚科</option>
+                <option value="リハビリテーション科">リハビリテーション科</option>
+                <option value="整形外科">整形外科</option>
+                <option value="形成外科">形成外科</option>
+                <option value="美容外科">美容外科</option>
+                <option value="美容皮膚科">美容皮膚科</option>
+                <option value="AGA">AGA</option>
+                <option value="麻酔科">麻酔科</option>
+                <option value="ペインクリニック">ペインクリニック</option>
+                <option value="集中治療科">集中治療科</option>
+                <option value="緩和ケア">緩和ケア</option>
+                <option value="放射線科">放射線科</option>
+                <option value="放射線治療科">放射線治療科</option>
+                <option value="病理科">病理科</option>
+                <option value="小児科">小児科</option>
+                <option value="小児外科">小児外科</option>
+                <option value="乳腺外科">乳腺外科</option>
+                <option value="産婦人科">産婦人科</option>
+                <option value="婦人科">婦人科</option>
+                <option value="不妊治療">不妊治療</option>
+                <option value="心療内科">心療内科</option>
+                <option value="精神科">精神科</option>
+                <option value="検査科">検査科</option>
+                <option value="老健">老健</option>
+                <option value="産業医">産業医</option>
+                <option value="社医">社医</option>
+                <option value="製薬">製薬</option>
+                <option value="その他">その他</option>
+            </select>
         </div>
         <input type="submit" class="mt-4 btn btn-primary" value="送信">
     </form>
@@ -116,7 +170,7 @@
             $('form').submit(function () {
                 const workType = $('input:checked').val();
                 const area = $('[name=area] option:selected').text();
-                const subject  = $('input[name="subject"]').val();
+                const subject  = $('[name="subject"] option:selected').val();
                 const msg = `${workType}\n${area}\n${subject}`;
                 sendText(msg);
                 return false;
